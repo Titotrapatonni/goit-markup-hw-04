@@ -78,6 +78,8 @@ body {
 .header-flex-item:last-child {
   margin-left: auto;
 }
+.header-flex-item {
+}
 /* Logo` */
 .header .link {
   display: flex;
@@ -89,10 +91,16 @@ body {
   letter-spacing: 0.02em;
 }
 .link,
-.logo {
+.logo,
+.project-item-link {
   display: block;
   color: inherit;
   text-decoration: none;
+}
+.project-item-link:hover,
+.project-item-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .list {
   list-style: none;
@@ -152,6 +160,7 @@ body {
   background-color: var(--bg-hero-color);
   text-align: center;
   padding: 200px 0;
+  max-width: 1600px;
 }
 
 .hero-title {
@@ -254,6 +263,9 @@ img {
 .team-member {
   background-color: var(--bg-tertiary-color);
   width: 270px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-member:not(:last-child) {
   margin-right: 30px;
@@ -284,14 +296,23 @@ img {
   border-radius: 50%;
   gap: 10px;
 }
-.social-link-item:hover {
-  background-color: #2196f3;
+.social-link-item:hover,
+.social-link:focus {
+  background-color: var(--bg-hover-color);
   border-radius: 50%;
+  fill: var(--text-tertiary-color);
 }
-.social-link-icon {
+.social-link-item .social-link:focus {
+  background-color: var(--bg-hover-color);
+}
+.social-link:focus .social-link-icon {
+  fill: var(--text-tertiary-color);
+}
+.team-member .social-link-icon {
   fill: #afb1b8;
 }
-.social-link-item:hover .social-link-icon {
+.social-link-item:hover .social-link-icon,
+.social-link-item:focus .social-link-icon {
   fill: #ffffff;
 }
 
@@ -332,7 +353,10 @@ img {
   border-radius: 4px;
 }
 .clients-item:hover .clients-icon {
-  fill: #2196f3;
+  fill: var(--bg-hover-color);
+}
+.clients-link:focus .clients-icon {
+  fill: var(--bg-hover-color);
 }
 /* Main Portfolio */
 /* Filters */
@@ -353,6 +377,11 @@ img {
   padding: 6px 22px;
   border: transparent;
   border-radius: 4px;
+}
+.filter:hover,
+.filter:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .filter-item:not(:last-child) {
   margin-right: 8px;
@@ -422,10 +451,10 @@ img {
 }
 .social-link-title {
   color: var(--text-tertiary-color);
-  font-family: var(--font-secondary);
+  font-family: var(--main-font);
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.17;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
