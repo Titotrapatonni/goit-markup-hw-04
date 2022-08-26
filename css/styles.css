@@ -162,7 +162,6 @@ body {
   padding: 200px 0;
   max-width: 1600px;
 }
-
 .hero-title {
   display: block;
   margin: 0 auto 30px;
@@ -176,7 +175,6 @@ body {
   text-transform: uppercase;
   width: 696px;
 }
-
 .button-order {
   display: inline-block;
   background-color: var(--bg-button-secondary-color);
@@ -296,10 +294,11 @@ img {
   border-radius: 50%;
   gap: 10px;
 }
-.social-link-item:hover,
-.social-link:focus {
+.social-link:hover {
   background-color: var(--bg-hover-color);
   border-radius: 50%;
+}
+.social-link:hover .social-link-icon {
   fill: var(--text-tertiary-color);
 }
 .social-link-item .social-link:focus {
@@ -315,7 +314,6 @@ img {
 .social-link-item:focus .social-link-icon {
   fill: #ffffff;
 }
-
 .social-link-list {
   display: flex;
   gap: 10px;
@@ -330,23 +328,29 @@ img {
   align-items: center;
   gap: 30px;
 }
-
 .clients-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid#AFB1B8;
+  border-radius: 4px;
+  width: 170px;
+  height: 92px;
+}
+.clients-link.link {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 170px;
   height: 92px;
-  padding: 16px 32px;
-  border: 1px solid#AFB1B8;
-  border-radius: 4px;
+  padding-top: 16px;
+  padding-right: 32px;
+  padding-bottom: 16px;
+  padding-left: 23px;
   cursor: pointer;
 }
 .clients-icon {
   fill: #afb1b8;
-}
-.clients-item .link {
-  display: flex;
 }
 .clients-item:hover {
   border: 1px solid #2196f3;
@@ -365,7 +369,6 @@ img {
   justify-content: center;
   margin-bottom: 50px;
 }
-
 .filter {
   background-color: var(--bg-button-primary-color);
   color: var(--text-secondary-color);
@@ -423,7 +426,6 @@ img {
   border-top: none;
 }
 /* Footer */
-
 .footer {
   background-color: var(--bg-footer-color);
   padding-top: 60px;
@@ -449,13 +451,11 @@ img {
 .flex-box-address {
   margin-right: 70px;
 }
-.social-link-title {
-  color: var(--text-tertiary-color);
-  font-family: var(--main-font);
+.social-link-suptitle {
   font-weight: 700;
-  font-size: 14px;
-  line-height: 1.17;
+  line-height: 1.14;
   text-transform: uppercase;
+  color: var(--text-tertiary-color);
   margin-bottom: 20px;
 }
 .social-link-item {
