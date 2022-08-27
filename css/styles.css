@@ -347,7 +347,8 @@ img {
 }
 .clients-icon {
   display: flex;
-  align-items: center;justify-content: center;
+  align-items: center;
+  justify-content: center;
   fill: #afb1b8;
 }
 .clients-link:hover,
